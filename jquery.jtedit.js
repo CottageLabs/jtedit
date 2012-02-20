@@ -127,7 +127,7 @@
         // meta stuff for visify. call this usuall
         var dovisify = function(data) {
             $('#jtedit_visual').html( visify( data ) )
-            $('.jtedit_key, .jtedit_value').autoResize({minHeight: 20, maxHeight:300, minWidth:100, maxWidth: 300, extraSpace: 5})
+            $('.jtedit_key, .jtedit_value').autoResize({minHeight: 20, maxHeight:300, minWidth:50, maxWidth: 250, extraSpace: 5})
             $('.jtedit_key, .jtedit_value').bind('blur',updates)
             $('.jtedit_key, .jtedit_value').bind('mouseup',selectall)
             $('.jtedit_key').autocomplete({source:options.tags})

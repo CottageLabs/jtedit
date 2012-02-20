@@ -95,6 +95,7 @@ textarea{
     border:none;
 }
 .jtedit_key{
+    padding:5px 30px 5px 10px;
     width:150px;
     height:20px;
     margin:0 -20px 0 0;

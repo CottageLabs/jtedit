@@ -82,9 +82,9 @@
                 
                 // do keys
                 if (data.constructor.toString().indexOf("Array") == -1) { // if this data is a dict
-                    s += '<textarea class="jtedit_key"'
-                    !editable ? s += ' disabled="disabled"' : false
-                    s += '>' + key + '</textarea>'
+                    key.length > 30 ? s += '<textarea class="jtedit_key"' : s += '<input type="text" class="jtedit_key"'
+                    !editable ? s += ' disabled="disabled" ' : false
+                    key.length > 30 ? s += '>' + key + '</textarea>' : s += ' value="' + key + '" />'
                 } else {
                     s += '<p class="jtedit_nokey"></p>'
                 }
@@ -105,9 +105,9 @@
                 if (typeof(data[key]) == 'object') { // if the data this key points at is an object
                     s += visify(data[key],editable)
                 } else {
-                    s += '<textarea class="jtedit_value"'
-                    !editable ? s += ' disabled="disabled"' : false
-                    s += '>' + data[key] + '</textarea>'
+                    data[key].length > 30 ? s += '<textarea class="jtedit_value"' : s += '<input type="text" class="jtedit_value"'
+                    !editable ? s += ' disabled="disabled" ' : false
+                    data[key].length > 30 ? s += '>' + data[key] + '</textarea>' : s += ' value="' + data[key] + '" />'
                 }
                 
                 if (editable) {

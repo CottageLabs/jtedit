@@ -330,16 +330,16 @@
             $('#jtedit',obj).remove()
             $(obj).append('<div id="jtedit" class="clearfix"></div>')
             var actions = '<div class="jtedit_actions"><div class="btn-group">' +
-                '<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Mode ' +
+                '<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-eye-open"></i> mode ' +
                 '<span class="caret"></span></a>' +
                 '<ul class="dropdown-menu">' +
                 '<li><a class="jtedit_mode" href="visual">visual</a></li>' + 
                 '<li><a class="jtedit_mode" href="json">JSON</a></li>' +
                 '</ul></div>' +
-                '<a class="jtedit_saveit btn btn-primary" href="save">save</a> ' + 
-                '<a class="jtedit_saveit btn btn-primary" href="saveas">save as</a> ' + 
-                '<a class="btn btn-warning" href="">reload</a> ' + 
-                '<a class="jtedit_deleteit btn btn-danger" href="">delete</a></div>'
+                '<a class="jtedit_saveit btn btn-primary" href="save"><i class="icon-check icon-white"></i> save</a> ' + 
+                '<a class="jtedit_saveit btn btn-primary" href="saveas"><i class="icon-share icon-white"></i> save as</a> ' + 
+                '<a class="btn btn-warning" href=""><i class="icon-refresh icon-white"></i> reload</a> ' + 
+                '<a class="jtedit_deleteit btn btn-danger" href=""><i class="icon-remove icon-white"></i> delete</a></div>'
             $('#jtedit').append(actions + '<div id="jtedit_visual"></div><textarea id="jtedit_json"></textarea>' + actions)
             
             var testdata = '{"abstract": "Folien zu einem Vortrag auf der ODOK 2010 in Leoben zu Linked Data und Open Data, mit einer knappen Darstellung der Linked-Open-Data-Aktivit\u110e\u1162ten im hbz-Verbund.", "added-at": "2011-02-17T13:00:20.000+0100", "author": ["pretend",["list","inalist"],{"id": "PohlAdrian","name": "Pohl, Adrian"},{"id": "PohlAdrian","name": "Pohl, Adrian"}], "journal":{"id":"somejournal","name":"somename"}, "biburl": "http://www.bibsonomy.org/bibtex/229ff5da471fd9d2706f2fd08c17b43dc/acka47", "cid": "Pohl_2010_LOD", "collection": "pohl", "copyright": "http://creativecommons.org/licenses/by/2.5/", "howpublished": "published via slideshare.net", "id": "531e7aa806574787897314010f29d4cf", "interhash": "558af6397a6aad826d47925a12eda76c", "intrahash": "29ff5da471fd9d2706f2fd08c17b43dc", "keyword": ["ODOK hbz libraries linkeddata myown opendata presentation"], "link": [{"url": "http://www.slideshare.net/acka47/pohl-20100923-odoklod"}], "month": "September", "owner": "test", "timestamp": "2011-02-17T13:00:20.000+0100", "title": "Freie Katalogdaten und Linked Data", "type": "misc", "url": "http://localhost:5000/test/pohl/Pohl_2010_LOD", "year": "2010" }'

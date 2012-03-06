@@ -72,7 +72,7 @@ textarea{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    padding:5px 0 5px 0;
+    padding:8px 0 2px 0;
 }
 .jtedit_optionswarn{
     border-color: rgba(255, 0, 0, 0.8);

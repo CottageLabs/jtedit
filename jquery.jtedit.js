@@ -298,7 +298,7 @@
                 $(this).closest('.jtedit_kvcontainer').children('.jtedit_hidnote').remove()
             } else {
                 $(this).addClass('jtedit_beenhidden')
-                $(this).html('<i class="icon-minus"></i> Show details')
+                $(this).html('<i class="icon-plus"></i> Show details')
                 $(this).closest('.jtedit_kvcontainer').children('.jtedit_vals').hide()
                 $(this).closest('.jtedit_kvcontainer').children('.jtedit_optionsgroup').after('<span class="jtedit_hidnote"><strong>. . .</strong></span>')
             }

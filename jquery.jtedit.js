@@ -23,23 +23,10 @@
             "editable":true,                    // whether or not to make the table editable
             "source":undefined,             // a source from which to GET the JSON data object
             "target":undefined,             // a target to which updated JSON should be POSTed
-            "noedit":["journal"],                    // a list of keys that should not be editable, when edit is enabled
-            "hide":["abstract"],                      // a list of keys that should be hidden from view
+            "noedit":[],                    // a list of keys that should not be editable, when edit is enabled
+            "hide":[],                      // a list of keys that should be hidden from view
             "data":undefined,               // a JSON object to render for editing
-            "tags": [
-                "type",
-                "assembly",
-                "name",
-                "drawing",
-                "assembled_by",
-                "assembled_date",
-                "inspected_by",
-                "inspected_date",
-                "assembly_history",
-                "location",
-                "location_history",
-                "test"
-            ]
+            "tags": []
         }
 
         // add in any overrides from the call

@@ -32,11 +32,6 @@
     -webkit-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
 }
-.btn-group{
-    margin:0 5px 0 5px;
-    float:left;
-    display:inline;
-}
 .jtedit_addanother{
     display:block;
     clear:both;
@@ -47,23 +42,16 @@
     border-top:1px solid #ccc;
 }
 
-
-input{
-    font-size:16px;
-    margin:0;
-    padding:0;
-    background:none;
+div.jtedit_actions > div.btn-group{
+    margin:0 5px 0 5px;
+    float:left;
+    display:inline;
 }
-textarea{
-    font-size:16px;
-    margin:0;
-    padding:0;
-    background:none;
-}
-
 .jtedit_optionsgroup{
     margin:0 0 0 -20px;
     padding:0;
+    float:left;
+    display:inline;
 }
 .jtedit_options{
     float:left;
@@ -99,12 +87,17 @@ textarea{
     width:150px;
     height:20px;
     margin:0 -20px 0 0;
+    font-size:16px;
+    background:none;
 }
 .jtedit_value{
    -moz-border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     border-radius: 0 10px 10px 0;
     padding:5px 10px 5px 10px;
+    margin:0;
+    font-size:16px;
+    background:none;
 }
 .jtedit_hidden{
     display:none;

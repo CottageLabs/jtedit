@@ -71,11 +71,11 @@
 
         // specify the defaults
         var defaults = {
-            "csv2list": true,                   // when encountering a field with comma separated values, turn them into a list. and vice versa
             "makeform": true,                   // whether or not to build the form first
             "actionbuttons": true,              // whether or not to show action buttons
             "jsonbutton": true,                 // show json button or not (alt. for these is write the buttons yourself)
             "source":undefined,                 // a source from which to GET the JSON data object
+            "post_source_callback": false,      // specify a function to run after ajax call for data
             "target": window.location,          // a target to which updated JSON should be POSTed
             "reloadonsave": window.location,    // if this has value, page reload will be triggered to location specified here after save
             "reloadondelete": window.location,  // where to redirect to after deleting
@@ -209,18 +209,22 @@
             $('.jtedit_saveit').bind('click',$.fn.jtedit.saveit);
             $('.jtedit_deleteit').bind('click',$.fn.jtedit.deleteit);
             $('.jtedit_json').bind('click',jtedit_json);
-            
+
             if (options.source) {
                 $.ajax({
                     url: options.source
                     , type: 'GET'
                     , success: function(data, statusText, xhr) {
-                        options.data = data
-                        dovisify(true)
+                        options.data = data;
+                        dovisify(true);
+                        // if a post search callback is provided, run it
+                        if (typeof options.post_source_callback == 'function') {
+                            options.post_source_callback.call(this);
+                        }
                     }
                     , error: function(xhr, message, error) {
-                        options.source = false
-                        alert("Sorry. Your data could not be parsed from " + sourceurl)
+                        options.source = false;
+                        alert("Sorry. Your data could not be parsed from " + sourceurl);
                     }
                 });
             } else {
